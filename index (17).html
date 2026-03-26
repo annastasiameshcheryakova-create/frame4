@@ -1,0 +1,30 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+<body>
+    <a-scene vr-mode-ui="enabled: false;"
+    renderer="logarithmicDepthBuffer: true;"
+    embedded
+    arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: true; debug:false ; ">
+        <a-marker preset="kanji" >
+              <a-sphere
+                src="FENEK.PNG.webp" scale=" 1 1 1" rotation="-90 0 0" ></a-sphere>
+        </a-marker>
+    <a-marker type="pattern" url="pattern-SuperSuper.patt">
+     <a-box src="Timoshka.sigma.jpg"></a-box>
+    </a-marker>
+    <a-marker preset="hiro" >  
+               <a-entity scale="1 1 1" rotation="-90 0 0" position="0 0 0">
+        <a-gltf-model src="little_cat.glb"
+        animation="property:rotation; to: 0 360 0; loop:true; dur:1125"
+        ></a-gltf-model>
+         </a-entity>
+        </a-marker>
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+</html>
